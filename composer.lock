@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b34fc3459bcb7ec890d0c2186340c12",
-    "content-hash": "48d3c42194038f337a107bd5c4371ed7",
+    "hash": "42a1b8ab34bde96957428634fb7f003a",
+    "content-hash": "ac20d9cf7d3ba985034ad3e4324bf2ac",
     "packages": [
         {
             "name": "josegonzalez/dotenv",
-            "version": "0.6.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/josegonzalez/php-dotenv.git",
-                "reference": "c115996bbe105fd1066c4b550bfd84d1ed08e8f2"
+                "reference": "68d6480475c88fa8bb3af1368f39dd5f802e9ef1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/c115996bbe105fd1066c4b550bfd84d1ed08e8f2",
-                "reference": "c115996bbe105fd1066c4b550bfd84d1ed08e8f2",
+                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/68d6480475c88fa8bb3af1368f39dd5f802e9ef1",
+                "reference": "68d6480475c88fa8bb3af1368f39dd5f802e9ef1",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,67 @@
                 "dotenv",
                 "php"
             ],
-            "time": "2015-03-02 01:55:01"
+            "time": "2015-08-13 22:37:04"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v5.2.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "45df3a88f7f46071e10d0b600f228d19f95911b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/45df3a88f7f46071e10d0b600f228d19f95911b3",
+                "reference": "45df3a88f7f46071e10d0b600f228d19f95911b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "*",
+                "phpunit/phpunit": "4.7.*"
+            },
+            "suggest": {
+                "league/oauth2-client": "Needed for Gmail's XOAUTH2 authentication system"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class.phpmailer.php",
+                    "class.phpmaileroauth.php",
+                    "class.phpmaileroauthgoogle.php",
+                    "class.smtp.php",
+                    "class.pop3.php",
+                    "extras/EasyPeasyICS.php",
+                    "extras/ntlm_sasl_client.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2015-09-14 09:18:12"
         },
         {
             "name": "swith/error",
@@ -89,6 +149,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "josegonzalez/dotenv": 20,
         "swith/error": 20
     },
     "prefer-stable": false,
