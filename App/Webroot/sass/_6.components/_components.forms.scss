@@ -31,6 +31,10 @@
 
 .contact__form__label, .contact__form__input {
     @include noBorder;
+
+    &:hover {
+      cursor: text;
+    }
 }
 
 .contact__form__input {
@@ -59,4 +63,19 @@
 
     border: 1px solid $red;
     background-color: transparent;
+    @include transition(all, $transitionDuration);
+  
+    &:hover {
+      color: #fff;
+      
+      background-color: $red;
+    }
+}
+
+.has-error {
+  float: right;
+  font-size: .8em;
+  font-style: italic;
+
+  color: $red;
 }
