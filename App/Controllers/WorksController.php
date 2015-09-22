@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 
 use Core\Helpers\CSRFTool;
+use Core\Helpers\Image;
+use Core\Helpers\ImageUploader;
 use SwithError\SwithError;
 
 class WorksController extends AppController
@@ -17,7 +19,8 @@ class WorksController extends AppController
         ]);
 
         $d['works'] = $this->Work->get([
-            "where" => ['online' => 1]
+            "where" => ['online' => 1],
+            "order" => "id DESC"
         ]);
 
         return $this->set($d);
@@ -25,12 +28,26 @@ class WorksController extends AppController
 
     public function admin_add()
     {
+        if ($this->Request->isPost && CSRFTool::check()) {
+            $_SESSION['posted'] = $this->Request->data;
+            if ($this->Work->validate($this->Request->data)) {
+                $name = substr(md5($this->Request->data->title), 0, 10);
+                $dest = BASE . DS . 'App' . DS . 'Webroot' . DS . 'img' . DS . 'works' . DS;
+                ImageUploader::upload($_FILES['img'], $name, $dest);
+                $this->Request->data->img = $name . Image::getExtension($_FILES['img']['name']);
+                unset($_SESSION['posted']);
+                $this->Work->create($this->Request->data);
+                $this->Session->setFlash("Work addes");
+            } else {
+                $this->Session->setFlash("Error", 'error');
+            }
+        }
 
+        $this->redirect($this->Request->referer);
     }
 
     public function admin_delete($slug)
     {
-        echo "ok";
         if ($this->Work->exist(['slug' => $slug])) {
             $id = $this->Work->getFirst([
                 'fields' => 'id',
