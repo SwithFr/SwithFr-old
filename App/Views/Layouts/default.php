@@ -15,6 +15,7 @@ use App\Config\App; ?>
         <?= App::getInstance()->getAppSettings('name'); ?>
     </title>
     <?= Html::css('main'); ?>
+    <?= Html::css('animated'); ?>
     <?php if($this->Request->url === '/works'): ?>
         <?= Html::css('sweetalert'); ?>
     <?php endif; ?>
@@ -23,8 +24,12 @@ use App\Config\App; ?>
 <body>
 <?php if($this->Auth->isLogged() && $this->Auth->role() === "admin"): ?>
     <div class="adminPanel">
-        <?= Html::link('logout', 'logout', null, ['class' => 'adminPanel__link']); ?> |
-        <?= Html::link('#', '+', null, ['class' => 'adminPanel__link adminPanel__link--big', 'id' => 'addWork']); ?>
+        <?= Html::link('logout', 'logout', null, ['class' => 'adminPanel__link']); ?>
+        <?php if($this->Request->controller === "works"): ?>
+            |
+            <?= Html::link('#', '+', null, ['class' => 'adminPanel__link adminPanel__link--big', 'id' => 'addWork']); ?>
+        <?php endif; ?>
+
     </div>
 <?php endif; ?>
 
