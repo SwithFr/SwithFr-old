@@ -25,7 +25,7 @@ use App\Config\App; ?>
 <?php if($this->Auth->isLogged() && $this->Auth->role() === "admin"): ?>
     <div class="adminPanel">
         <?= Html::link('logout', 'logout', null, ['class' => 'adminPanel__link']); ?>
-        <?php if($this->Request->controller === "works"): ?>
+        <?php if($this->Request->url === "/works"): ?>
             |
             <?= Html::link('#', '+', null, ['class' => 'adminPanel__link adminPanel__link--big', 'id' => 'addWork']); ?>
         <?php endif; ?>
