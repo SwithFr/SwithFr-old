@@ -49,11 +49,12 @@ class WorksController extends AppController
     public function admin_delete($slug)
     {
         if ($this->Work->exist(['slug' => $slug])) {
-            $id = $this->Work->getFirst([
+            $work = $this->Work->getFirst([
                 'fields' => 'id',
                 'where' => ['slug' => $slug]
-            ])->id;
-            $this->Work->delete($id);
+            ]);
+            unlink(BASE . DS . 'App' . DS . 'Webroot' . DS . 'img' . DS . 'works' . DS . $work->img);
+            $this->Work->delete($work->id);
         }
     }
 
