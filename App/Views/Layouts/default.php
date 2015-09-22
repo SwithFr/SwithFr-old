@@ -58,6 +58,7 @@ use App\Config\App; ?>
     </div>
 </div>
 <div class="wrap">
+    <?= $this->Session->flash(); ?>
     <?= $content_for_layout; ?>
 </div>
 <?php if($this->Request->url === '/works'): ?>
