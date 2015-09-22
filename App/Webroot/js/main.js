@@ -112,10 +112,24 @@
 
         } );
 
-
         // Abort editing
         $( '.adminToolBar__link--abort' ).on( "click", function( e ){
             reset( e, true );
+        } );
+
+        // Display Add Work form
+        $( '#addWork').on( "click", function( e ){
+            e.preventDefault();
+            $( '#addWorkForm' ).toggleClass( 'hidden' );
+        } );
+
+        $( '.alert' ).slideDown();
+
+        // Remove alert
+        $( '.alert').on( "click", function( e ){
+            e.preventDefault();
+
+            $( this).slideUp();
         } );
 
     } );
