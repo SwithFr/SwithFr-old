@@ -28,7 +28,7 @@ if($this->Auth->isLogged()): ?>
             <?php endif; ?>
             <h2 class="work__title"><?= $work->title; ?></h2>
             <figure class="work__img">
-                <a href="#" class="work__img__link" title="Voir le projet BookStore en action"><?= \Core\Helpers\Html::img('works/' . $work->img); ?></a>
+                <a href="#" class="work__img__link" title="Voir le projet <?= $work->title; ?> en action"><?= \Core\Helpers\Html::img('works/' . $work->img); ?></a>
             </figure>
             <p class="work__description"><?= $work->description; ?></p>
         </div>
