@@ -2,7 +2,7 @@
     <h2 class="content__title">À propos</h2>
     <h3 class="content__subtitle">Vous voulez en savoir un peu plus sur moi ?</h3>
     <p class="content__text">
-        Salut ! Moi c'est Jeremy, j'ai 26 ans et j'étudie l'infographie à la Haute École de la Province de Liège, plus connue sous le nom de <abbr title="Haute Ecole de la Province de Liège">HEPL</abbr> (À ne pas confondre avec HELP, quoique...). Actuellement je suis en 3ème et dernière année dans l'option web.
+        Salut ! Moi c'est Jeremy, j'ai 26 ans et j'étudie l'infographie à la Haute École de la Province de Liège, plus connue sous le nom de <abbr title="Haute Ecole de la Province de Liège">HEPL</abbr> (à ne pas confondre avec HELP, quoique...). Actuellement je suis en 3ème et dernière année dans l'option web.
     </p>
     <p class="content__text">
         Je suis quelqu'un de simple qui aime les choses simples (la sobriété de ce site en est une preuve). Je priviligie toujours la lisibilité et la clarté lors de mes réalisations. J'aime aussi apprendre de nouvelles technologies par moi-même. Je suis persévérant et capable de passer des heures sur un problème tant qu'il n'est' pas résolu... Eh oui ! je n'abandonne pas très facilement.
