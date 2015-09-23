@@ -30,12 +30,17 @@
         $target = $target.slice(1, $target.length);
     }
 
+    var closeOrShowAdminForm = function( e ) {
+        e.preventDefault();
+        $( '#addWorkForm' ).toggleClass( 'hidden' );
+    }
+
     $( function(){
 
         // Display edit Form
         $( '.adminToolBar__link--edit' ).on( "click", function( e ){
             titleTemplate = $( "<input class='editForm__input editForm__input--title' autocomplete='off' type='text' name='title'/>" ),
-            descriptionTemplate = $( "<textarea class='editForm__input editForm__input--description' rows='5' name='description'/>" );
+                descriptionTemplate = $( "<textarea class='editForm__input editForm__input--description' rows='5' name='description'/>" );
 
             e.preventDefault();
 
@@ -86,15 +91,15 @@
             setTarget( e );
             swal(
                 {
-                     title: "Are you sure?",
-                     text: "You will not be able to recover this work !",
-                     type: "error",
-                     showCancelButton: true,
-                     confirmButtonColor: "#DD6B55",
-                     confirmButtonText: "Yes, delete it !",
-                     cancelButtonText: "No, abort please!",
-                     closeOnConfirm: false,
-                     closeOnCancel: false
+                    title: "Are you sure?",
+                    text: "You will not be able to recover this work !",
+                    type: "error",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes, delete it !",
+                    cancelButtonText: "No, abort please!",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
                 },
                 function( isConfirm ) {
                     if ( isConfirm ) {
@@ -119,11 +124,13 @@
 
         // Display Add Work form
         $( '#addWork').on( "click", function( e ){
-            e.preventDefault();
-            $( '#addWorkForm' ).toggleClass( 'hidden' );
+           closeOrShowAdminForm( e );
         } );
 
-        $( '.alert' ).slideDown();
+        // Display Add Work form
+        $( '#closeAdminForm').on( "click", function( e ){
+           closeOrShowAdminForm( e );
+        } );
 
         // Remove alert
         $( '.alert').on( "click", function( e ){
