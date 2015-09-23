@@ -27,16 +27,22 @@
     font-size: 1.2em;
     font-weight: 300;
 
-    span {
-        font-family: "fira_sansregular";
+    span.colored {
+      font-family: "fira_sansregular";
     }
+}
+
+.header__homeLink:hover {
+  text-decoration: none;
 }
 
 .header__subtitle {
     margin-top: .3em;
+    display: block;
 
     font-size: 2em;
-    font-weight: 300;
+    font-family: 'fira_sanslight';
+    text-transform: uppercase;
 
     span {
         color: $red;
