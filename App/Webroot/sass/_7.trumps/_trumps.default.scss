@@ -11,12 +11,10 @@
 
 @media screen and (max-width: 815px) {
 
-    body {
-        overflow: visible;
-    }
-
     .wrap {
-        display: block;
+      display: block;
+      padding-top: 9em;
+      padding-left: 0;
     }
 
     .header--left svg {
