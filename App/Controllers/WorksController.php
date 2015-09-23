@@ -37,7 +37,7 @@ class WorksController extends AppController
                 $this->Request->data->img = $name . Image::getExtension($_FILES['img']['name']);
                 unset($_SESSION['posted']);
                 $this->Work->create($this->Request->data);
-                $this->Session->setFlash("Work addes");
+                $this->Session->setFlash("Work added");
             } else {
                 $this->Session->setFlash("Error", 'error');
             }
