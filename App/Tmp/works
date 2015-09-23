@@ -1,0 +1,28 @@
+<div class="content works">
+    <h1 class="content__title">Mes réalisations</h1>
+    <span class="content__subtitle">Voici quelques unes de mes réalisations. Il y a un peu de tout, des projets scolaires ou personnels. La plus part sont disponnibles sur GitHub, si cela vous intéresse.</span>
+            <section itemscope itemtype="http://schema.org/WebSite" class="work" id="test2">
+            <meta itemprop="creator" content="Jeremy Smith" itemscope itemtype="http://schema.org/Person"/>
+                        <h2 itemprop='name' class="work__title">DS Wallonie</h2>
+            <div class="work__img">
+                <a itemprop="url" href="" class="work__img__link" title="Voir le projet DS Wallonie en action"><img src=/App/Webroot//img/works/dswallonie.png alt="Aperçu du projet DS Wallonie"itemprop='image' width='100' ></a>
+            </div>
+            <p itemprop="description" class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis recusandae atque rerum at quam quia fugit a, quisquam dolores, cum aspernatur illo asperiores sint reprehenderit quibusdam ea voluptatibus iste et?</p>
+        </section>
+            <section itemscope itemtype="http://schema.org/WebSite" class="work" id="test1">
+            <meta itemprop="creator" content="Jeremy Smith" itemscope itemtype="http://schema.org/Person"/>
+                        <h2 itemprop='name' class="work__title">Ecco Nova</h2>
+            <div class="work__img">
+                <a itemprop="url" href="" class="work__img__link" title="Voir le projet Ecco Nova en action"><img src=/App/Webroot//img/works/ecconova.png alt="Aperçu du projet Ecco Nova"itemprop='image' width='100' ></a>
+            </div>
+            <p itemprop="description" class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis recusandae atque rerum at quam quia fugit a, quisquam dolores, cum aspernatur illo asperiores sint reprehenderit quibusdam ea voluptatibus iste et?</p>
+        </section>
+            <section itemscope itemtype="http://schema.org/WebSite" class="work" id="bookstore">
+            <meta itemprop="creator" content="Jeremy Smith" itemscope itemtype="http://schema.org/Person"/>
+                        <h2 itemprop='name' class="work__title">BookStore</h2>
+            <div class="work__img">
+                <a itemprop="url" href="" class="work__img__link" title="Voir le projet BookStore en action"><img src=/App/Webroot//img/works/bookstore.png alt="Aperçu du projet BookStore"itemprop='image' width='100' ></a>
+            </div>
+            <p itemprop="description" class="work__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis recusandae atque rerum at quam quia fugit a, quisquam dolores, cum aspernatur illo asperiores sint reprehenderit quibusdam ea voluptatibus iste et?</p>
+        </section>
+    </div>

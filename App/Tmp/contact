@@ -1,0 +1,19 @@
+<div class="content contact">
+    <h1 class="content__title">Me contacter</h1>
+    <span class="content__subtitle">Vous cherchez un type sympa qui fera de son mieux pour répondre à vos besoins ? Ça tombe bien ! moi je cherche quelqu’un de sympa avec qui travailler.</span>
+    <form action=/contact-me method='POST' class='contact__form' >        <input class="contact__form__input" onkeyup="this.setAttribute('value', this.value);" type="text" name="name" id="name" value="">
+        <label class="contact__form__label contact__form__label--placeholder" for="name">Prénom Nom *  </label>
+
+        <input class="contact__form__input" onkeyup="this.setAttribute('value', this.value);" type="email" name="email" id="email" value="">
+        <label class="contact__form__label contact__form__label--placeholder" for="email">Votre email <span class="contact__form__label__ex">(example@fai.fr)</span> * </label>
+
+        <input class="contact__form__input" onkeyup="this.setAttribute('value', this.value);" type="text" name="subject" id="subject" value="">
+        <label class="contact__form__label contact__form__label--placeholder" for="subject">Sujet</label>
+
+        <label class="contact__form__label" for="msg">Message * </label>
+        <textarea id="msg" class="contact__form__textarea" name="msg" rows="8" cols="40"></textarea>
+
+        <input class="contact__form__submit" type="submit" value="Envoyer">
+    </form>
+</div>
+<script type='text/javascript' src='/App/Webroot/js/jquery.js'></script><script type='text/javascript' src='/App/Webroot/js/main.js'></script>
