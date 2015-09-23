@@ -1,6 +1,7 @@
 <?php use Core\Helpers\Form;
-
-if($this->Auth->isLogged()): ?>
+use Core\Helpers\Html;
+?>
+<?php if($this->Auth->isLogged()): ?>
     <?php $hidden = isset($_SESSION['flash']) ? '' : 'hidden'; ?>
     <?= Form::start("add/work", 'POST', ['enctype' => 'multipart/form-data', 'class' => 'adminForm ' . $hidden, 'id' => 'addWorkForm']); ?>
         <label for="title" class="adminForm__label">Titre</label>
@@ -18,7 +19,7 @@ if($this->Auth->isLogged()): ?>
         <button id="closeAdminForm">Close</button>
     <?= Form::end("Ajouter", ['class' => 'adminForm__submit']); ?>
 <?php endif; ?>
-<section class="content works">
+<div class="content works">
     <h1 class="content__title"><?= $metas->title; ?></h1>
     <span class="content__subtitle"><?= $metas->subtitle; ?></span>
     <?php foreach($works as $work): ?>
@@ -34,9 +35,9 @@ if($this->Auth->isLogged()): ?>
             <?php endif; ?>
             <h2 itemprop='name' class="work__title"><?= $work->title; ?></h2>
             <div class="work__img">
-                <a itemprop="url" href="<?= \Core\Helpers\Html::url($work->url, true); ?>" class="work__img__link" title="Voir le projet <?= $work->title; ?> en action"><?= \Core\Helpers\Html::img('works/' . $work->img, "Aperçu du projet " . $work->title, ['itemprop' => 'image']); ?></a>
+                <a itemprop="url" href="<?= Html::url($work->url, true); ?>" class="work__img__link" title="Voir le projet <?= $work->title; ?> en action"><?= Html::img('works/' . $work->img, "Aperçu du projet " . $work->title, ['itemprop' => 'image', 'width' => 100]); ?></a>
             </div>
             <p itemprop="description" class="work__description"><?= $work->description; ?></p>
         </section>
     <?php endforeach; ?>
-</section>
+</div>
