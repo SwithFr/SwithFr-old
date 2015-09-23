@@ -1,7 +1,7 @@
 <?php use Core\Helpers\Html;
 use App\Config\App; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
@@ -46,30 +46,31 @@ use App\Config\App; ?>
         <h2 class="header__subtitle">Développeur <span>w</span>eb</h2>
         <ul class="nav">
             <li class="nav__item nav__item--bordered">
-                <?= Html::link("about", "À propos"); ?>
+                <?= Html::link("about", "À propos", null, ['title' => 'Apprenez en plus sur moi']); ?>
             </li>
             <li class="nav__item nav__item--bordered">
-                <?= Html::link("works", "Réalisations"); ?>
+                <?= Html::link("works", "Réalisations", null, ['title' => 'Découvrez mes projets']); ?>
             </li>
             <li class="nav__item">
-                <?= Html::link("contact-me", "Contact"); ?>
+                <?= Html::link("contact-me", "Contact", null, ['title' => 'Contactez moi']); ?>
             </li>
         </ul>
         <ul class="nav">
-            <li class="nav__item nav__item--scl"><a href="#">t</a></li>
-            <li class="nav__item nav__item--scl"><a href="#">Git</a></li>
-            <li class="nav__item nav__item--scl"><a href="#">in</a></li>
+            <li class="nav__item nav__item--scl"><a title="Visitez ma page twitter" href="https://twitter.com/SwithFr">t</a></li>
+            <li class="nav__item nav__item--scl"><a title="Visitez ma page GitHub" href="https://github.com/SwithFr">Git</a></li>
+            <li class="nav__item nav__item--scl"><a title="Visitez ma page Linkedin" href="https://fr.linkedin.com/pub/jérémy-smith/45/973/445">in</a></li>
         </ul>
     </div>
 </div>
 <div class="wrap">
     <?= $this->Session->flash(); ?>
     <?= $content_for_layout; ?>
+    <?= $this->Element('vcard'); ?>
 </div>
 <?php if($this->Request->url === '/works'): ?>
-    <?= Html::js('jquery'); ?>
-    <?= Html::js('sweetalert.min'); ?>
-    <?= Html::js('main'); ?>
+    <?= Html::js('min/jquery'); ?>
+    <?= Html::js('min/sweetalert.min'); ?>
+    <?= Html::js('min/main'); ?>
 <?php endif; ?>
 </body>
 </html>
