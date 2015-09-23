@@ -9,8 +9,9 @@
 }
 
 .content__title {
-  margin-bottom: 1em;
+  margin-bottom: .3em;
 
+  text-transform: uppercase;
   color: $red;
   font-size: 1.9em;
   font-weight: 500;
@@ -18,11 +19,11 @@
 
 .content__subtitle {
   display: block;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: $gold;
-  font-family: "fira_sansregular";
+  font-family: "fira_sanslight";
 }
 
 .content__text {
