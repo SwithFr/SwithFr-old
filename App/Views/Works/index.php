@@ -19,6 +19,7 @@ use Core\Helpers\Html;
         <button id="closeAdminForm">Close</button>
     <?= Form::end("Ajouter", ['class' => 'adminForm__submit']); ?>
 <?php endif; ?>
+<?php if (!\Core\Components\Cache::start('works')): ?>
 <div class="content works">
     <h1 class="content__title"><?= $metas->title; ?></h1>
     <span class="content__subtitle"><?= $metas->subtitle; ?></span>
@@ -41,3 +42,5 @@ use Core\Helpers\Html;
         </section>
     <?php endforeach; ?>
 </div>
+<?php endif; ?>
+<?= \Core\Components\Cache::end(); ?>
