@@ -12,7 +12,7 @@
         <label class="contact__form__label contact__form__label--placeholder" for="subject">Sujet</label>
 
         <label class="contact__form__label" for="msg">Message * <?= isset($errors['msg']) ? "<span class='has-error'>" . $errors['msg'] . "</span>" : ''; ?></label>
-        <textarea class="contact__form__textarea" name="msg" rows="8" cols="40"><?= isset($posted->msg) ? $posted->msg : ''; ?></textarea>
+        <textarea id="msg" class="contact__form__textarea" name="msg" rows="8" cols="40"><?= isset($posted->msg) ? $posted->msg : ''; ?></textarea>
 
         <input class="contact__form__submit" type="submit" value="Envoyer">
     </form>
