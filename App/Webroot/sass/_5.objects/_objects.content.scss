@@ -1,29 +1,30 @@
 .content {
-    padding: 15em;
+  padding: 15em;
 
-    @include transition(padding, $transitionDuration);
+  @include transition(padding, $transitionDuration);
 
-    p {
-        margin: 1em 0;
-    }
+  p {
+      margin: 1em 0;
+  }
 }
 
 .content__title {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 
-    color: $red;
-    font-size: 1.9em;
-    font-weight: 500;
+  color: $red;
+  font-size: 1.9em;
+  font-weight: 500;
 }
 
 .content__subtitle {
-    margin-bottom: 3em;
+  display: block;
+  margin-bottom: 3em;
 
-    font-size: 1.2em;
-    color: $gold;
-    font-family: "fira_sansregular";
+  font-size: 1.2em;
+  color: $gold;
+  font-family: "fira_sansregular";
 }
 
 .content__text {
-    color: $greyBlack;
+  color: $greyBlack;
 }
