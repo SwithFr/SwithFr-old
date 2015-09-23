@@ -9,8 +9,13 @@ if($this->Auth->isLogged()): ?>
         <label for="img" class="adminForm__label">Image</label>
         <input type="file" name="img" id="img" class="adminForm__input"/>
 
+        <label for="url" class="adminForm__label">URL</label>
+        <input type="text" name="url" id="url" class="adminForm__input" value="<?= isset($_SESSION['posted']->url) ? $_SESSION['posted']->url : ''; ?>"/>
+
         <label for="description" class="adminForm__label">Description</label>
         <textarea name="description" id="description" class="adminForm__input" cols="30" rows="10"><?= isset($_SESSION['posted']->description) ? $_SESSION['posted']->description : ''; ?></textarea>
+
+        <button id="closeAdminForm">Close</button>
     <?= Form::end("Ajouter", ['class' => 'adminForm__submit']); ?>
 <?php endif; ?>
 <div class="content works">
