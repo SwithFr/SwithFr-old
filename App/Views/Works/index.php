@@ -18,11 +18,12 @@ if($this->Auth->isLogged()): ?>
         <button id="closeAdminForm">Close</button>
     <?= Form::end("Ajouter", ['class' => 'adminForm__submit']); ?>
 <?php endif; ?>
-<div class="content works">
+<section class="content works">
     <h2 class="content__title"><?= $metas->title; ?></h2>
-    <h3 class="content__subtitle"><?= $metas->subtitle; ?></h3>
+    <span class="content__subtitle"><?= $metas->subtitle; ?></span>
     <?php foreach($works as $work): ?>
-        <div class="work" id="<?= $work->slug; ?>">
+        <section itemscope itemtype="http://schema.org/WebSite" class="work" id="<?= $work->slug; ?>">
+            <meta itemprop="creator" content="Jeremy Smith" itemscope itemtype="http://schema.org/Person"/>
             <?php if($this->Auth->isLogged()): ?>
                 <span class="adminToolBar">
                     <a href="#" class="adminToolBar__link adminToolBar__link--save">Save</a>
@@ -31,11 +32,11 @@ if($this->Auth->isLogged()): ?>
                     <a class="adminToolBar__link adminToolBar__link--delete" href="#<?= $work->slug; ?>">X</a>
                 </span>
             <?php endif; ?>
-            <h2 class="work__title"><?= $work->title; ?></h2>
-            <figure class="work__img">
-                <a href="#" class="work__img__link" title="Voir le projet <?= $work->title; ?> en action"><?= \Core\Helpers\Html::img('works/' . $work->img); ?></a>
-            </figure>
-            <p class="work__description"><?= $work->description; ?></p>
-        </div>
+            <h2 itemprop='name' class="work__title"><?= $work->title; ?></h2>
+            <div class="work__img">
+                <a itemprop="url" href="<?= \Core\Helpers\Html::url($work->url, true); ?>" class="work__img__link" title="Voir le projet <?= $work->title; ?> en action"><?= \Core\Helpers\Html::img('works/' . $work->img, "Aperçu du projet " . $work->title, ['itemprop' => 'image']); ?></a>
+            </div>
+            <p itemprop="description" class="work__description"><?= $work->description; ?></p>
+        </section>
     <?php endforeach; ?>
-</div>
+</section>
