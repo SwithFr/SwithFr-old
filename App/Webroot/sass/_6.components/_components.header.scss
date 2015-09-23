@@ -1,5 +1,5 @@
 .header {
-    width: 300px;
+    width: 330px;
     margin: 0 auto;
 
     text-align: center;
@@ -20,7 +20,7 @@
 .header--center {
     position: absolute;
     top: calc(50% - 180px);
-    left: calc(50% - 150px);
+    left: calc(50% - 200px);
 }
 
 .header__title {
@@ -40,7 +40,7 @@
     margin-top: .3em;
     display: block;
 
-    font-size: 2em;
+    font-size: 1.7em;
     font-family: 'fira_sanslight';
     text-transform: uppercase;
 
