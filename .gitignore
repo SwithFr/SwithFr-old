@@ -2,4 +2,5 @@
 .idea
 
 /vendor
+/App/Config/prod.env
 /App/Config/dev.env
