@@ -1,7 +1,5 @@
 .header {
-    width: 330px;
-    margin: 0 auto;
-
+    width: 30em;
     text-align: center;
     color: $greyBlack;
 
@@ -9,12 +7,16 @@
 }
 
 .header--left {
-    min-width: 450px;
-    min-height: 100%;
-    height: 100%;
-    width: 30%;
-    position: absolute;
-    top: calc(50% - 180px);
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  -webkit-justify-content: center;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  width: 20em;
 }
 
 .header--center {
@@ -24,12 +26,14 @@
 }
 
 .header__title {
-    font-size: 1.2em;
-    font-weight: 300;
+  margin: 0;
 
-    span.colored {
-      font-family: "fira_sansregular";
-    }
+  font-size: 1.2em;
+  font-weight: 300;
+
+  span.colored {
+    font-family: "fira_sansregular";
+  }
 }
 
 .header__homeLink:hover {
@@ -50,13 +54,12 @@
 }
 
 .ct {
-    position: relative;
-    height: 100%;
-    min-width: 450px;
-    min-height: 100%;
-    height: 100%;
-    width: 30%;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 20em;
 
-    border-right: 1px dashed $lightGrey;
-    @include transition(width, $transitionDuration);
+  border-right: 1px dashed $lightGrey;
+  @include transition(width, $transitionDuration);
 }
