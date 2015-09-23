@@ -39,6 +39,6 @@ return [
     'environments_ip' => [
         '127.0.0.1' => 'dev',
         'ip_test' => 'test',
-        'ip_prod' => 'prod'
+        '5.196.88.56' => 'prod'
     ]
 ];
