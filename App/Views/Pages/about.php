@@ -1,6 +1,6 @@
 <section class="content about">
     <h2 class="content__title">À propos</h2>
-    <h3 class="content__subtitle">Vous voulez en savoir un peu plus sur moi ?</h3>
+    <span class="content__subtitle">Vous voulez en savoir un peu plus sur moi ?</span>
     <p class="content__text">
         Salut ! Moi c'est Jeremy, j'ai 26 ans et j'étudie l'infographie à la Haute École de la Province de Liège, plus connue sous le nom de <abbr title="Haute Ecole de la Province de Liège">HEPL</abbr> (à ne pas confondre avec HELP, quoique...). Actuellement je suis en 3ème et dernière année dans l'option web.
     </p>

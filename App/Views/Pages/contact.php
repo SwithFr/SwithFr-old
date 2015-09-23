@@ -1,6 +1,6 @@
 <section class="content contact">
     <h2 class="content__title"><?= $metas->title; ?></h2>
-    <h3 class="content__subtitle"><?= $metas->subtitle; ?></h3>
+    <span class="content__subtitle"><?= $metas->subtitle; ?></span>
     <?= \Core\Helpers\Form::start("contact-me", "POST", ['class' => 'contact__form']); ?>
         <input class="contact__form__input" onkeyup="this.setAttribute('value', this.value);" type="text" name="name" id="name" value="<?= isset($posted->name) ? $posted->name : ''; ?>">
         <label class="contact__form__label contact__form__label--placeholder" for="name">Prénom Nom *  <?= isset($errors['name']) ? "<span class='has-error'>" . $errors['name'] . "</span>" : ''; ?></label>
