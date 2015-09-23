@@ -42,7 +42,7 @@ use App\Config\App; ?>
                     <path fill="#C94F45" d="M175.3,156.7C127.5,136.6,2,122.6,0.1,0c0,0-7.4,123.6,152.7,170.3L175.3,156.7z"/>
                 <path fill="#C94F45" d="M75.1,163.9c47.7,20.1,173.3,35.2,174.8,131.8c0,0,7.8-98.8-152.3-145.5L75.1,163.9z"/>
                 </svg>
-            <h1 class="header__title">Jeremy <span class="colored">Smith</span><span class="header__subtitle">Développeur <span>w</span>eb</span></h1>
+            <p class="header__title">Jeremy <span class="colored">Smith</span><span class="header__subtitle">Développeur <span>w</span>eb</span></p>
         </a>
 
         <ul class="nav">

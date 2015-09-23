@@ -1,5 +1,5 @@
 <section class="content contact">
-    <h2 class="content__title"><?= $metas->title; ?></h2>
+    <h1 class="content__title"><?= $metas->title; ?></h1>
     <span class="content__subtitle"><?= $metas->subtitle; ?></span>
     <?= \Core\Helpers\Form::start("contact-me", "POST", ['class' => 'contact__form']); ?>
         <input class="contact__form__input" onkeyup="this.setAttribute('value', this.value);" type="text" name="name" id="name" value="<?= isset($posted->name) ? $posted->name : ''; ?>">

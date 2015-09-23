@@ -19,7 +19,7 @@ if($this->Auth->isLogged()): ?>
     <?= Form::end("Ajouter", ['class' => 'adminForm__submit']); ?>
 <?php endif; ?>
 <section class="content works">
-    <h2 class="content__title"><?= $metas->title; ?></h2>
+    <h1 class="content__title"><?= $metas->title; ?></h1>
     <span class="content__subtitle"><?= $metas->subtitle; ?></span>
     <?php foreach($works as $work): ?>
         <section itemscope itemtype="http://schema.org/WebSite" class="work" id="<?= $work->slug; ?>">
