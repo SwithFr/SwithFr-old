@@ -1,4 +1,4 @@
-<div class="content contact">
+<section class="content contact">
     <h2 class="content__title"><?= $metas->title; ?></h2>
     <h3 class="content__subtitle"><?= $metas->subtitle; ?></h3>
     <?= \Core\Helpers\Form::start("contact-me", "POST", ['class' => 'contact__form']); ?>
@@ -16,6 +16,6 @@
 
         <input class="contact__form__submit" type="submit" value="Envoyer">
     </form>
-</div>
+</section>
 <?= \Core\Helpers\Html::js('jquery'); ?>
 <?= \Core\Helpers\Html::js('main'); ?>
