@@ -50,11 +50,11 @@
             $description = $( '#' + $target + ' .work__description' );
             sTitle = $title.html();
             $.ajax({
-                url: "http://swith.dev/get/work/" + $target,
+                url: "http://" + window.location.hostname + "/get/work/" + $target,
                 method: "GET",
                 success: function( r ) {
                     sDescription = r;
-                    descriptionTemplate.val( sDescription );
+                    descriptionTemplate.val( $( '<div/>' ).html( sDescription).text() );
                     $description.replaceWith( descriptionTemplate );
                 }
             });
@@ -78,7 +78,7 @@
             var data = "title=" + $( '.editForm__input--title' ).val() + "&description=" + $( '.editForm__input--description' ).val();
 
             $.ajax({
-                url: "edit/work/" + $target,
+                url: "http://" + window.location.hostname + "/edit/work/" + $target,
                 method: "POST",
                 data: data,
                 beforeSend: function (xhr) {
