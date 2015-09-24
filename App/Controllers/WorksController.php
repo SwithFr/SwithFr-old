@@ -50,7 +50,7 @@ class WorksController extends AppController
     {
         if ($this->Work->exist(['slug' => $slug])) {
             $work = $this->Work->getFirst([
-                'fields' => 'id',
+                'fields' => 'id, img',
                 'where' => ['slug' => $slug]
             ]);
             unlink(BASE . DS . 'App' . DS . 'Webroot' . DS . 'img' . DS . 'works' . DS . $work->img);
@@ -68,5 +68,17 @@ class WorksController extends AppController
                 "message" => "Request lost in the void..."
             ]))->display(false);
         }
+    }
+
+    public function admin_getDescription($slug)
+    {
+        $this->layout = 'empty';
+        
+        $work = $this->Work->getFirst([
+            'fields' => 'description',
+            "where" => ['slug' => $slug]
+        ]);
+        echo $work->description;
+        die();
     }
 }
