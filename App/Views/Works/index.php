@@ -16,10 +16,9 @@ use Core\Helpers\Html;
         <label for="description" class="adminForm__label">Description</label>
         <textarea name="description" id="description" class="adminForm__input" cols="30" rows="10"><?= isset($_SESSION['posted']->description) ? $_SESSION['posted']->description : ''; ?></textarea>
 
-        <button id="closeAdminForm">Close</button>
+        <a href="#" id="closeAdminForm">Close</a>
     <?= Form::end("Ajouter", ['class' => 'adminForm__submit']); ?>
 <?php endif; ?>
-<?php if (!\Core\Components\Cache::start('works')): ?>
 <div class="content works">
     <h1 class="content__title"><?= $metas->title; ?></h1>
     <span class="content__subtitle"><?= $metas->subtitle; ?></span>
@@ -36,11 +35,9 @@ use Core\Helpers\Html;
             <?php endif; ?>
             <h2 itemprop='name' class="work__title"><?= $work->title; ?></h2>
             <div class="work__img">
-                <a itemprop="url" href="<?= Html::url($work->url, true); ?>" class="work__img__link" title="Voir le projet <?= $work->title; ?> en action"><?= Html::img('works/' . $work->img, "Aperçu du projet " . $work->title, ['itemprop' => 'image', 'width' => 100]); ?></a>
+                <a itemprop="url" href="http://<?= Html::url($work->url, true); ?>" class="work__img__link" title="Voir le projet <?= $work->title; ?> en action"><?= Html::img('works/' . $work->img, "Aperçu du projet " . $work->title, ['itemprop' => 'image', 'width' => 100]); ?></a>
             </div>
-            <p itemprop="description" class="work__description"><?= $work->description; ?></p>
+            <div itemprop="description" class="work__description"><?= \Michelf\Markdown::defaultTransform($work->description); ?></div>
         </section>
     <?php endforeach; ?>
 </div>
-<?php endif; ?>
-<?= \Core\Components\Cache::end(); ?>
