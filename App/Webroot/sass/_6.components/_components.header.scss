@@ -1,5 +1,5 @@
 .header {
-    width: 20em;
+    width: 22em;
     text-align: center;
     color: $greyBlack;
 
@@ -16,7 +16,7 @@
   display: flex;
   display: -webkit-flex;
   align-items: center;
-  width: 20em;
+  width: 22em;
 }
 
 .header--center {
@@ -58,7 +58,7 @@
   left: 0;
   position: fixed;
   top: 0;
-  width: 20em;
+  width: 22em;
 
   border-right: 1px dashed $lightGrey;
   @include transition(width, $transitionDuration);
