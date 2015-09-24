@@ -1,4 +1,3 @@
-<?php if (!\Core\Components\Cache::start('contact')): ?>
 <div class="content contact">
     <h1 class="content__title"><?= $metas->title; ?></h1>
     <span class="content__subtitle"><?= $metas->subtitle; ?></span>
@@ -19,4 +18,4 @@
     </form>
 </div>
 <?= \Core\Helpers\Html::js('jquery'); ?>
-<?= \Core\Helpers\Html::js('main'); endif; \Core\Components\Cache::end();?>
+<?= \Core\Helpers\Html::js('main');?>
