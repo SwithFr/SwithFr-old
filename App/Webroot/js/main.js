@@ -49,7 +49,15 @@
             $title = $( '#' + $target + ' .work__title' );
             $description = $( '#' + $target + ' .work__description' );
             sTitle = $title.html();
-            sDescription = $description.html();
+            $.ajax({
+                url: "http://swith.dev/get/work/" + $target,
+                method: "GET",
+                success: function( r ) {
+                    sDescription = r;
+                    descriptionTemplate.val( sDescription );
+                    $description.replaceWith( descriptionTemplate );
+                }
+            });
 
             $( this ).hide();
             $( '#' + $target + ' .adminToolBar__link--save' ).show();
@@ -57,8 +65,6 @@
 
             titleTemplate.val( sTitle );
             $title.replaceWith( titleTemplate );
-            descriptionTemplate.val( sDescription );
-            $description.replaceWith( descriptionTemplate );
 
         } );
 
