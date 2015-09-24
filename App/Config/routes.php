@@ -42,6 +42,7 @@ Router::join('logout', [
     "action"     => 'logout'
 ]);
 
+
 /**--------------------------
  * ADMIN
  --------------------------*/
@@ -71,4 +72,14 @@ Router::join('add/work', [
     "controller" => 'works',
     "action"     => 'add',
     "prefixe"    => 'admin',
+]);
+
+# Récupère un work
+Router::join('get/work/{slug}', [
+    "controller" => 'works',
+    "action"     => 'getDescription',
+    "prefixe"    => 'admin',
+    "params"     => [
+        "slug"  => '/[a-zA-Z\-]/'
+    ]
 ]);
