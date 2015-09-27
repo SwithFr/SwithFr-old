@@ -10,4 +10,5 @@
     <p class="content__text">
         Si vous lisez ce 3ème paragraphe, je commence déjà à vous apprécier ! Si vous voulez en savoir d'avantage sur mes compétences, vous pouvez télécharger mon CV, et si mon profil vous interesse n'hésitez pas à me contacter.
     </p>
+    <?= \Core\Helpers\Html::img('moi', 'Photo de moi', ['style' => 'max-width:100;']); ?>
 </div>
