@@ -57,9 +57,9 @@ use App\Config\App; ?>
             </li>
         </ul>
         <ul class="nav">
-            <li class="nav__item nav__item--scl"><a title="Visitez ma page twitter" href="https://twitter.com/SwithFr">t</a></li>
-            <li class="nav__item nav__item--scl"><a title="Visitez ma page GitHub" href="https://github.com/SwithFr">Git</a></li>
-            <li class="nav__item nav__item--scl"><a title="Visitez ma page Linkedin" href="https://fr.linkedin.com/pub/jérémy-smith/45/973/445">in</a></li>
+            <li class="nav__item nav__item--scl"><a title="Visitez ma page twitter" href="https://twitter.com/SwithFr"><?= \Core\Helpers\Html::img('t.svg', 'Logo twitter'); ?></a></li>
+            <li class="nav__item nav__item--scl"><a title="Visitez ma page GitHub" href="https://github.com/SwithFr"><?= \Core\Helpers\Html::img('github.svg', 'Logo GitHub'); ?></a></li>
+            <li class="nav__item nav__item--scl"><a title="Visitez ma page Linkedin" href="https://fr.linkedin.com/pub/jérémy-smith/45/973/445"><?= \Core\Helpers\Html::img('linkedin.svg', 'Logo Linkedin'); ?></a></li>
         </ul>
     </div>
 </div>
