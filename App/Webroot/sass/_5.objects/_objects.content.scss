@@ -1,5 +1,7 @@
 .content {
   padding: 15em;
+  max-width: 800px;
+  margin: 0 auto;
 
   @include transition(padding, $transitionDuration);
 
