@@ -60,7 +60,11 @@ class WorksController extends AppController
 
     public function admin_edit($slug)
     {
+        $this->needRender = false;
         if ($this->Request->isPost && $this->Work->exist(['slug' => $slug])) {
+            if (isset($_REQUEST["PHPSESSID"])) {
+                unset($_REQUEST["PHPSESSID"]);
+            }
             $this->Work->update($slug, $_REQUEST);
         } else {
             (new SwithError([
