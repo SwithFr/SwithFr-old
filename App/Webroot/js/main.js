@@ -10,6 +10,19 @@
         titleTemplate,
         descriptionTemplate;
 
+    var alertBox = function( type, message ) {
+        var a = document.createElement( "a" );
+        var m = document.createTextNode( message );
+
+        a.classList.add( 'animated');
+        a.classList.add( 'bounceInDown' );
+        a.classList.add( 'alert');
+        a.classList.add( 'alert--' + type );
+        a.href = "#";
+        a.appendChild( m );
+        $( 'body' ).prepend( a );
+    }
+
     var reset = function( e, abort ) {
         var defaultTitleTemplate = $( "<h2 class='work__title'></h2>" ),
             defaultDescriptionTemplate = $( "<p class='work__description'></p>" );
@@ -76,16 +89,19 @@
             $( '#' + $target + ' .adminToolBar__link--abort' ).hide();
 
             var data = "title=" + $( '.editForm__input--title' ).val() + "&description=" + $( '.editForm__input--description' ).val();
-
             $.ajax({
-                url: "http://" + window.location.hostname + "/edit/work/" + $target,
+                url: window.location.origin + "/edit/work/" + $target,
                 method: "POST",
                 data: data,
                 beforeSend: function (xhr) {
                     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
                 },
-                success: function( r ) {
-                    window.location.reload();
+                success: function(r) {
+                    alertBox( "success", "Réalisation mise à jour !" );
+
+                    window.setTimeout( function() {
+                        window.location.reload();
+                    }, 1500 );
                 }
             });
 
