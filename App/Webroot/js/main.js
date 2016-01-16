@@ -50,7 +50,7 @@
             $description = $( '#' + $target + ' .work__description' );
             sTitle = $title.html();
             $.ajax({
-                url: "http://" + window.location.hostname + "/get/work/" + $target,
+                url: window.location.origin + "/get/work/" + $target,
                 method: "GET",
                 success: function( r ) {
                     sDescription = r;
@@ -85,6 +85,7 @@
                     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
                 },
                 success: function( r ) {
+                    window.location.reload();
                 }
             });
 
